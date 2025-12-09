@@ -1,0 +1,13 @@
+use college
+
+db.createCollection("student")
+
+db.student.insertOne({
+    name:"ankit",
+    age:20,
+    course:"mern",
+    city:"siwan"
+
+})
+
+db.student.find();
