@@ -2,12 +2,36 @@ use college
 
 db.createCollection("student")
 
-db.student.insertOne({
+db.student.insertMany(
+    [
+        {
+            id:102,
     name:"ankit",
     age:20,
     course:"mern",
     city:"siwan"
+},
 
-})
+  {
+    id:103,
+    name:"bimlesh",
+    age:20,
+    course:"mean",
+    city:"nepal"
+},
+  {
+    id:104,
+    name:"amit",
+    age:30,
+    course:"sales",
+    city:"chapra"
+}
 
+]
+)
+
+db.student.updateOne({id:104},{$set:{city:"patna"}})
 db.student.find();
+
+db.student.deleteOne({id:103})
+
